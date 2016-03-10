@@ -38,8 +38,6 @@ public class MemberService {
 				
 				//设置客户端登陆有效时间
 				member.setExpired(calendar.getTime());
-				//TODO 忘记token有什么用了 想起来再搞
-				member.setToken(us.getToken(username, password,calendar.getTime().toString()));		
 				dao.update(member);
 				return member;
 			}
